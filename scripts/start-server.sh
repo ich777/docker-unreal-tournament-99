@@ -1,6 +1,4 @@
 #!/bin/bash
-sleep infinity
-
 echo "---Checking if Unreal Tournament 99 is installed...---"
 if [ ! -f ${DATA_DIR}/ucc ]; then
   echo "---Unreal Tournament 99 not found, downloading and installing, please wait...---"
