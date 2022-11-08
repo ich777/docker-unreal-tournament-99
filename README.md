@@ -1,4 +1,4 @@
-# Unreal Tournament 99 Server in Docker optimized for Unraid
+# Unreal Tournament 99 in Docker optimized for Unraid
 This Docker will download and install Unreal Tournament 99 with the patch v.451
 
 **ATTENTION:** It is strongly recommended to change the maps and game modes from the web server!
