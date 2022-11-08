@@ -24,8 +24,8 @@ chmod -R 750 /opt/scripts
 chown -R ${UID}:${GID} ${DATA_DIR}
 
 term_handler() {
-	kill -SIGKILL $(pidof TBD)
-	tail --pid=$(pidof TBD) -f 2>/dev/null
+	kill -SIGKILL $(pidof ucc-bin)
+	tail --pid=$(pidof ucc-bin) -f 2>/dev/null
 	sleep 0.5
 	exit 143;
 }
