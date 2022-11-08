@@ -42,11 +42,15 @@ fi
 if [ "${WEBSERVER}" == "true" ]; then
   echo "---Webserver Enabled!---"
   WEBSERVER="True"
+  sed -i "s/AdminUsername=.*/AdminUsername=${WEB_USERNAME}/g" ${DATA_DIR}/System/${SERVER_INI} 2>/dev/null
+  sed -i "s/AdminPassword=.*/AdminPassword=${WEB_PASSWORD}/g" ${DATA_DIR}/System/${SERVER_INI} 2>/dev/null
+  export WEB_USERNAME=""
+  export WEB_PASSWORD=""
 else
   echo "---Webserver Disabled!---"
   WEBSERVER="False"
 fi
-sed -i "s/bEnabled=.*/bEnabled=${WEBSERVER}/g" ${DATA_DIR}/System/UnrealTournament.ini
+sed -i "s/bEnabled=.*/bEnabled=${WEBSERVER}/g" ${DATA_DIR}/System/${SERVER_INI} 2>/dev/null
 chmod -R ${DATA_PERM} ${DATA_DIR}
 
 echo "---Start Server---"
